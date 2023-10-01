@@ -3,6 +3,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
 </head>
+<title>Unstable Resource - Ludum Dare 54</title>
 <body>
 
 <script type="text/javascript">
@@ -27,6 +28,7 @@
 class MainMenuScene extends Phaser.Scene {
     constructor() {
         super({ key: "MainMenuScene" });
+        loadFont();
     }
 
     preload() {
@@ -60,6 +62,7 @@ let enemyStopped = false;
 class GameScene extends Phaser.Scene {
     constructor() {
         super({ key: "GameScene" });
+        loadFont();
     }
 
     preload() {
@@ -308,9 +311,7 @@ class GameScene extends Phaser.Scene {
     }
 
     update() {
-        if (isGameOver && !isGameOverShown) {
-            console.log("Game Over");
-
+        if (isGameOver && !isGameOverShown) {            
             if (playerScore > 100) {
                 this.tubes.setVisible(false);
                 this.blueDestroyed.setVisible(true);
