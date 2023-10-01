@@ -5,6 +5,23 @@
 </head>
 <body>
 
+<script type="text/javascript">
+    function loadFont() {
+        var newFont = new FontFace("arcadeclassic", `url("./assets/fonts/ARCADECLASSIC.TTF")`);
+        newFont
+            .load()
+            .then(function (loaded) {
+                document.fonts.add(loaded);
+            })
+            .catch(function (error) {
+                return error;
+            });
+        
+    }
+    
+    window.onload = loadFont;
+</script>
+
 <script>
 
 class MainMenuScene extends Phaser.Scene {
