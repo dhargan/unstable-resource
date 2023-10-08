@@ -1,5 +1,3 @@
-const Phaser = require("phaser");
-
 let playerScore = 0;
 let enemyScore = 0;
 let isGameOver = false;
@@ -10,6 +8,7 @@ let enemyStopped = false;
 class GameScene extends Phaser.Scene {
     constructor() {
         super({ key: "GameScene" });
+        loadFont();
     }
 
     preload() {
@@ -123,7 +122,7 @@ class GameScene extends Phaser.Scene {
 
         this.restartButton.setVisible(false);
 
-        const stopButton = this.add.text(185, 650, "Stop", {
+        const stopButton = this.add.text(185, 670, "Stop", {
             fontSize: "32px",
             fill: "#fff",
             fontFamily: "ArcadeClassic",
@@ -259,8 +258,6 @@ class GameScene extends Phaser.Scene {
 
     update() {
         if (isGameOver && !isGameOverShown) {
-            console.log("Game Over");
-
             if (playerScore > 100) {
                 this.tubes.setVisible(false);
                 this.blueDestroyed.setVisible(true);
@@ -287,4 +284,4 @@ class GameScene extends Phaser.Scene {
     }
 }
 
-module.exports = GameScene;
+export default GameScene;
