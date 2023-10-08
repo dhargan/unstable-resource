@@ -2,28 +2,13 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <script type="text/javascript" src="/assets/js/helpers.js"></script>
+    <script type="text/javascript">    
+        window.onload = loadFont;
+    </script>
 </head>
 <title>Unstable Resource - Ludum Dare 54</title>
 <body style="background-color: black;">
-
-<script type="text/javascript">
-    function loadFont() {
-        var newFont = new FontFace("arcadeclassic", `url("./assets/fonts/ARCADECLASSIC.TTF")`);
-        newFont
-            .load()
-            .then(function (loaded) {
-                document.fonts.add(loaded);
-            })
-            .catch(function (error) {
-                return error;
-            });
-        
-    }
-    
-    window.onload = loadFont;
-</script>
-
-<script type="module" src="/assets/js/main.js"></script>
-
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>
