@@ -9,6 +9,7 @@
   "author": "Teoman Unay",
   "license": "ISC",
   "dependencies": {
-    "phaser": "^3.60.0"
+    "phaser": "^3.60.0",
+    "redux": "^4.2.1"
   }
 }
