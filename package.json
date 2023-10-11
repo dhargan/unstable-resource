@@ -9,9 +9,7 @@
   "author": "Teoman Unay",
   "license": "ISC",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.7",
     "http-server": "^14.1.1",
-    "phaser": "^3.60.0",
-    "redux": "^4.2.1"
+    "phaser": "^3.60.0"
   }
 }
