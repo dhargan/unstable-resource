@@ -1,12 +1,11 @@
-const { Game } = require("phaser");
-import MainMenuScene from "../scenes/MainMenuScene"; // MainMenuScene dosyasını içe aktarın
-import GameScene from "../scenes/GameScene"; // GameScene dosyasını içe aktarın
+import MainMenuScene from "/assets/scenes/MainMenuScene.js";
+import GameScene from "/assets/scenes/GameScene.js";
 
-const gameConfig = {
+const config = {
     type: Phaser.AUTO,
     width: 1024,
     height: 768,
     scene: [MainMenuScene, GameScene],
 };
 
-const game = new Game(gameConfig);
+const game = new Phaser.Game(config);

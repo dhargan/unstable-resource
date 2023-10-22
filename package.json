@@ -9,6 +9,7 @@
   "author": "Teoman Unay",
   "license": "ISC",
   "dependencies": {
+    "http-server": "^14.1.1",
     "phaser": "^3.60.0"
   }
 }

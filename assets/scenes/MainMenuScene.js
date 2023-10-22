@@ -1,8 +1,7 @@
-const Phaser = require("phaser");
-
 class MainMenuScene extends Phaser.Scene {
     constructor() {
         super({ key: "MainMenuScene" });
+        loadFont();
     }
 
     preload() {
@@ -26,4 +25,4 @@ class MainMenuScene extends Phaser.Scene {
     }
 }
 
-module.exports = MainMenuScene;
+export default MainMenuScene;
